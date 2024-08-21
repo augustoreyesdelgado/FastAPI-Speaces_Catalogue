@@ -1,7 +1,19 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request, status
+from src.routers import router
+
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import RedirectResponse
 
 app = FastAPI()
 
-@app.get("/")
-def read_root():
-    return {"message": "Hello, FastAPI!"}
+app.mount('/static', StaticFiles(directory='src/static'), name='static')
+
+@app.get('/')
+def test(request: Request):
+    return RedirectResponse(url="/catalogo/home-page", status_code=status.HTTP_302_FOUND)
+
+@app.get('/healthy')
+def health_check():
+    return {'status': 'Healthy'}
+
+app.include_router(router.router)
