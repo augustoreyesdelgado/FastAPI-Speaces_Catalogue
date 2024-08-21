@@ -13,7 +13,7 @@ def test(request: Request):
     return RedirectResponse(url="/catalogo/home-page", status_code=status.HTTP_302_FOUND)
 
 @app.get('/healthy')
-def health_check():
+async def health_check():
     return {'status': 'Healthy'}
 
 app.include_router(router.router)

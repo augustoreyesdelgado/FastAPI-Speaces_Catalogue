@@ -8,7 +8,7 @@ router = APIRouter(
 
 templates = Jinja2Templates(directory="src/templates")
 
-### PAGES ###
+### PAGINAS ###
 
 @router.get('/home-page')
 def render_login_page(request: Request):
