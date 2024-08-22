@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogo de Especies</title>
 </head>
-<body class="p-4 text-lime-500">
+<body class="bg-blue-950 flex flex-col min-h-screen">
 
     {% include 'navbar.html' %}
-
     {% block content %}
-
     {% endblock %}
+    <script src="{{ url_for('static', path='/js/utils.js') }}" defer></script>
 </body>
 </html>
