@@ -1,0 +1,30 @@
+{% include 'layout.html' %}
+
+  <div class="bg-gray-900">
+
+    <h1 class="p-8 text-white font-bold text-center">Bienvenido al catalogo de especies</h1>
+
+    <div class="min-h-screen flex">
+
+      <div class="flex-1 p-4 h-full ">
+        <div class="bg-black rounded-2xl">
+        <p class="text-white font-bold text-center">Ingresar imagen de especimen</p>
+            <div class="flex  max-h-full p-4 items-center justify-center">
+              <div id="dropzone" class="bg-gray-200 border-2 border-dashed rounded-2xl border-gray-400 w-80 h-80 flex items-center justify-center text-center cursor-pointer">
+                <p id="dropzone-text" class="text-gray-500">Arrastra y suelta una imagen aquí o haz clic para cargar</p>
+            <img id="preview" class="hidden" />
+              </div>
+              <input type="file" id="fileInput" class="hidden" accept="image/*" onchange="handleFile(event)" />
+            </div>
+        </div>
+      </div>
+
+      <div class="flex-1 p-4 h-full">
+            <p class="text-purple-300 font-bold text-center">aaaa</p>
+      </div>
+
+    </div>
+          
+  </div>
+
+  {% include 'footer.html' %}
