@@ -2,26 +2,37 @@
 
   <div class="bg-gray-900">
 
-    <h1 class="p-8 text-white font-bold text-center">Bienvenido al catalogo de especies</h1>
+    <h1 class="p-8 text-white font-bold text-center">An&aacute;lisis de esp&eacute;cimen biol&oacute;gico</h1>
 
     <div class="min-h-screen flex">
 
-      <div class="flex-1 p-4 h-full ">
+      <div class="flex-1 p-4 h-full">
         <div class="bg-black rounded-2xl">
-        <p class="text-white font-bold text-center">Ingresar imagen de especimen</p>
-            <div class="flex  max-h-full p-4 items-center justify-center">
-              <div id="dropzone" class="bg-gray-200 border-2 border-dashed rounded-2xl border-gray-400 w-80 h-80 flex items-center justify-center text-center cursor-pointer">
-                <p id="dropzone-text" class="text-gray-500">Arrastra y suelta una imagen aquí o haz clic para cargar</p>
-            <img id="preview" class="hidden" />
+            <p class="text-white font-bold text-center">Ingresar imagen de especimen</p>
+            <div class="flex max-h-full p-4 items-center justify-center">
+                <form id="registerForm">
+                  <div id="dropzone" class="bg-gray-200 border-2 border-dashed rounded-2xl border-gray-400 w-80 h-80 flex items-center justify-center text-center cursor-pointer relative">
+                    <p id="dropzone-text" class="text-gray-500 absolute">Arrastra y suelta una imagen aquí o haz clic para cargar</p>
+                    <img id="preview" class="absolute inset-0 object-contain w-full h-full hidden rounded-2xl" />
+                  </div>
+                  <input type="file" id="fileInput" name="imagen" class="hidden" accept="image/*" onchange="handleFiles(this.files)" />
+                  <input type="text" id="textInput" name="bandera" class="hidden" value="Foto1392.jpg" />
+    
+                  <button type="submit" class="my-1 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Clasificar</button>
+              </form>
               </div>
-              <input type="file" id="fileInput" class="hidden" accept="image/*" onchange="handleFile(event)" />
+          </div>
+      </div>
+    
+
+    <div class="flex-1 p-4 h-full">
+        <div class="bg-black rounded-2xl">
+            <p class="text-white font-bold text-center"></p>
+            <div class="flex max-h-full p-4 items-center justify-center">
+                <p class="text-white font-bold text-center">PLACEHOLDER</p>
             </div>
         </div>
-      </div>
-
-      <div class="flex-1 p-4 h-full">
-            <p class="text-purple-300 font-bold text-center">aaaa</p>
-      </div>
+    </div>
 
     </div>
           
